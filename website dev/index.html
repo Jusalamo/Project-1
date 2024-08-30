@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Things Broken</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo h1 {
+            font-size: 24px;
+            color: #ffdd00;
+        }
+
+        nav .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        nav .nav-links li {
+            margin-left: 20px;
+        }
+
+        nav .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Page Content */
+        .page-content {
+            padding-top: 60px; /* Adjust based on header height */
+        }
+
+        /* Best Deals Section */
+        #best-deals {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #best-deals h2 {
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        .deals-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .deal-item {
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .deal-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .deal-item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .deal-item p {
+            margin-bottom: 10px;
+        }
+
+        /* Listings Section */
+        #listings {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .listings-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .listing-item {
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .listing-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .listing-item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .listing-item p {
+            margin-bottom: 10px;
+        }
+
+        .listing-item a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Sell Your Car Form */
+        #sell-form {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #sell-form form {
+            display: inline-block;
+            text-align: left;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        #sell-form label {
+            font-size: 16px;
+        }
+
+        #sell-form input,
+        #sell-form textarea {
+            padding: 10px;
+            margin: 5px 0; /* Reduced space */
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #sell-form button {
+            padding: 10px 20px;
+            background-color: #ffdd00;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Login Form */
+        #login {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #login form {
+            display: inline-block;
+            text-align: left;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        #login input {
+            padding: 10px;
+            margin: 5px 0; /* Reduced space */
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #login button {
+            padding: 10px 20px;
+            background-color: #ffdd00;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Profile Section */
+        #profile {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Additional Pages Styling */
+        .additional-page {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <h1>All Things Broken</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#best-deals">Home</a></li>
+            <li><a href="#listings">Listings</a></li>
+            <li><a href="#sell-form">Sell Your Car</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-content">
+
+        <!-- Home Page with Best Deals Section -->
+        <section id="best-deals">
+            <h2>Best Deals</h2>
+            <div class="deals-container">
+                <!-- Example Deal Item -->
+                <div class="deal-item">
+                    <img src="https://via.placeholder.com/200x150" alt="Car 1">
+                    <h3>2015 Toyota Corolla</h3>
+                    <p>Price: $7,000</p>
+                    <a href="#listings">View Details</a>
+                </div>
+                <!-- Add more deals here -->
+            </div>
+        </section>
+
+        <!-- Listings Section -->
+        <section id="listings">
+            <h2>All Car Listings</h2>
+            <div class="listings-container">
+                <!-- Example Listing Item -->
+                <div class="listing-item">
+                    <img src="https://via.placeholder.com/200x150" alt="Car 2">
+                    <h3>2018 Honda Civic</h3>
+                    <p>Price: $12,000</p>
+                    <a href="#best-deals">View Details</a>
+                </div>
+                <!-- Add more listings here -->
+            </div>
+        </section>
+
+        <!-- Sell Your Car Form -->
+        <section id="sell-form">
+            <h2>Sell Your Car</h2>
+            <form id="car-form">
+                <label for="car-images">Upload Car Images:</label>
+                <input type="file" id="car-images" accept="image/*" multiple required><br><br>
+                <label for="make-model">Make and Model:</label>
+                <input type="text" id="make-model" placeholder="e.g., Toyota Corolla" required><br><br>
+                <label for="price">Price:</label>
+                <input type="number" id="price" placeholder="Enter Price" required><br><br>
+                <label for="description">Car History/Description:</label><br>
+                <textarea id="description" rows="5" placeholder="Provide details about the car"></textarea><br><br>
+                <button type="submit">Submit Listing</button>
+            </form>
+        </section>
+
+        <!-- Login Form -->
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username-email">Username or Email:</label>
+                <input type="text" id="username-email" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <!-- Additional Pages -->
+        <section id="home" class="additional-page">
+            <h2>Home</h2>
+            <p>Welcome to our site. Here you can find deals of the week, about us, contact information, and more.</p>
+            <h3>Deals of the Week</h3>
+            <!-- Deals of the Week Content -->
+        </section
+
